@@ -10,7 +10,7 @@ client = commands.Bot(command_prefix = "!")
 @client.event
 async def on_ready():
     print("Clayton Services is ran by Clayton_Enforcement")
-    await client.change_presence(game=Game(name='Ran by Clayton_Enforcement'))
+    await client.change_presence(game=discord.Game(name='Ran by Clayton_Enforcement'))
 
 @client.event
 async def on_message(message):
@@ -23,9 +23,5 @@ async def on_message(message):
     if message.content.startswith('!development'):
             msg = 'Hello {0.author.mention} You may find the information for development on the Clayton Services Trello here: https://trello.com/c/T2dgVkWk/4-development-project-pricing'.format(message)
             await client.send_message(message.channel, msg)
-            
-
 
 client.run(os.getenv('TOKEN')
-
-
